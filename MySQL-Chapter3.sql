@@ -18,9 +18,8 @@ ORDER BY last_name, first_name;
 
 /*
 Query 2 - Faith Coufal
-      All customers with INVALID email addresses. A valid email address is the first name, a period, the last name, and
-     @sakilacustomer.org. Example: debbie.johnson@sakilacustomer.org
-      Note: to thoroughly test this query, temporarily change the WHERE clause to report VALID emails
+     All customers with INVALID email addresses. A valid email address is the first name, a period, the last name, and @sakilacustomer.org. Example: debbie.johnson@sakilacustomer.org
+     Note: to thoroughly test this query, temporarily change the WHERE clause to report VALID emails
 */
 
 SELECT first_name, last_name, email,
@@ -31,10 +30,17 @@ ORDER BY valid_email;
 
 
 /*
-Query 3: Write a query that reports the following:
-	 the current rental rate, what a 30% increase would be, and the new rental rate
-	 only report the ones that have a rental rate that increased by over $0.50
-	 order the report by amount increased descending
-	 round all calculated values to 2 decimal positions
-	 Note: to fully test this query, temporarily comment out the WHERE clause
+Query 3 - Jacob Mundt
+	the current rental rate, what a 30% increase would be, and the new rental rate
+	only report the ones that have a rental rate that increased by over $0.50
+	order the report by amount increased descending
+	round all calculated values to 2 decimal positions
+	Note: to fully test this query, temporarily comment out the WHERE clause
 */
+
+SELECT title, rental_rate, 
+	round(rental_rate * 0.30, 2) AS amount_increased,
+	round(rental_rate * 1.30, 2) AS rental_rate
+FROM film
+WHERE round(rental_rate * 0.30, 2) >= 0.50
+ORDER BY amount_increased
