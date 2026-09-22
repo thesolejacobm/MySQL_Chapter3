@@ -15,3 +15,16 @@ SELECT customer_id, CONCAT(first_name, ", ", last_name) AS cust_name, active, em
 FROM customer
 WHERE active = 0 
 ORDER BY last_name, first_name;
+
+/*
+Query 2 - Faith Coufal
+      All customers with INVALID email addresses. A valid email address is the first name, a period, the last name, and
+     @sakilacustomer.org. Example: debbie.johnson@sakilacustomer.org
+      Note: to thoroughly test this query, temporarily change the WHERE clause to report VALID emails
+*/
+
+SELECT first_name, last_name, email,
+	CONCAT(first_name, '.', last_name, '@sakilacustomer.org') AS valid_email
+FROM if26faitc_sakila.customer
+WHERE email != CONCAT(first_name, '.', last_name, '@sakilacustomer.org')
+ORDER BY valid_email;
