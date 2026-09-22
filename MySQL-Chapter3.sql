@@ -28,3 +28,13 @@ SELECT first_name, last_name, email,
 FROM if26faitc_sakila.customer
 WHERE email != CONCAT(first_name, '.', last_name, '@sakilacustomer.org')
 ORDER BY valid_email;
+
+
+/*
+Query 3: Write a query that reports the following:
+	 the current rental rate, what a 30% increase would be, and the new rental rate
+	 only report the ones that have a rental rate that increased by over $0.50
+	 order the report by amount increased descending
+	 round all calculated values to 2 decimal positions
+	 Note: to fully test this query, temporarily comment out the WHERE clause
+*/
