@@ -44,3 +44,19 @@ SELECT title, rental_rate,
 FROM film
 WHERE round(rental_rate * 0.30, 2) >= 0.50
 ORDER BY amount_increased
+
+/*
+Query 4 - Faith Coufal
+ payment amount and date (MM-DD-YYYY)
+ filter by payment date greater than 01-01-2006 inclusively and payment amount greater than 1.00
+ sort the query by payment amount
+ Note: to thoroughly test the query comment out the WHERE clause to verify the filter is working correctly
+*/
+
+SELECT amount, DATE_FORMAT(payment_date, '%m-%d-%y') AS payment_date
+FROM if26faitc_sakila.payment
+
+WHERE amount > 1.00 
+	and payment_date > '2006-01-01' 
+		
+ORDER BY amount;
