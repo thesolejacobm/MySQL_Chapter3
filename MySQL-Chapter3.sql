@@ -91,6 +91,19 @@ Query 6 - Faith Coufal
  WHERE (special_features LIKE '%Trailers%' OR special_features LIKE '%Behind the Scenes%') AND special_features not like '%Commentaries%' 
  
  ORDER BY title
+/*
+Query 7: Faith Coufal
+ films that are rated G, PG, and PG-13 (note: please use the IN phrase for this filter)
+ sort by rating and title
+ Note: to thoroughly test this query, temporarily comment out the WHERE clause
+*/
+SELECT 
+    title, rental_rate, rating
+FROM
+    film
+WHERE
+    rating IN ('G' , 'PG', 'PG-13')
+ORDER BY rating , title
 
 /*	 
 Query 8: Faith Coufal
@@ -105,3 +118,26 @@ FROM film
 WHERE description LIKE '%Robot%' and description LIKE '%Squirrel%'
 
 ORDER BY title
+
+/*
+Query 9: Faith Coufal
+	unique customers who have NOT returned their rental
+	sort by customer id
+	Note: to thoroughly test this query, temporarily change the WHERE clause to report rentals that have been
+returned
+*/
+	
+SELECT customer_id, return_date
+FROM rental
+WHERE return_date IS NULL
+ORDER BY customer_id
+
+/*
+Query 10: Faith Coufal
+	unique districts
+	sort by district
+	limit the rows returned to start at the 2nd row and returning a total of 25 rows
+	Note: to thoroughly test this query, temporarily remove the limit clause
+*/
+
+
