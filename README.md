@@ -41,5 +41,34 @@ This assignment is 10 queries on the Sakila database to show knowledge of the co
  - BETWEEN operator
  - Null Values
 
-### Output images
+### Output Screenshots
 
+Query 1
+![Query1](assets/Query1-SS.png)
+
+Query 2
+![Query2](assets/Query2-SS.png)
+
+Query 3
+![Query3](assets/Query3-SS.png)
+
+Query 4
+![Query4](assets/Query4-SS.png)
+
+Query 5
+![Query5](assets/Query5-SS.png)
+
+Query 6
+![Query6](assets/Query6-SS.png)
+
+Query 7
+![Query7](assets/Query7-SS.png)
+
+Query 8
+![Query8](assets/Query8-SS.png)
+
+Query 9
+![Query9](assets/Query9-SS.png)
+
+Query 10
+![Query10](assets/Query10-SS.png)
