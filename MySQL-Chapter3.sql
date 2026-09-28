@@ -60,6 +60,23 @@ WHERE amount > 1.00
 	and payment_date > '2006-01-01' 
 
 ORDER BY amount;
+
+/*
+Query 5: Faith Coufal
+ displaying only the first 50 characters of the description; followed by …
+ filter to only report rental durations between 3 and 6 (using the BETWEEN operator)
+ sort by the rental duration descending
+ Note: to thoroughly test, temporarily comment out the WHERE clause
+*/
+
+SELECT 
+    title, CONCAT(LEFT(description, 50), '...') as info, rental_duration
+FROM
+    film
+WHERE
+    rental_duration BETWEEN 3 AND 6
+ORDER BY rental_duration DESC
+
 /*
 Query 6 - Faith Coufal
 	films that have (trailers OR behind the scenes) special features but NOT commentaries
@@ -76,7 +93,7 @@ Query 6 - Faith Coufal
  ORDER BY title
 
 /*	 
-Query 8: Write a query that reports the following:
+Query 8: Faith Coufal
 	films that have the words robot and squirrel in the description
 	sort by title
 	Note: to thoroughly test this query, temporarily comment out the WHERE clause
